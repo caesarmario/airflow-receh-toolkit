@@ -1,0 +1,13 @@
+# Local machine settings
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Generated workshop files
+output/*.csv
+
+# Local Airflow files, if any
+logs/
+.airflow/

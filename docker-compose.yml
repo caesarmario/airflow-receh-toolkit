@@ -1,0 +1,20 @@
+services:
+  airflow:
+    image: apache/airflow:3.3.2
+    command: standalone
+    user: "${AIRFLOW_UID:-50000}:0"
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "false"
+      AIRFLOW__CORE__SIMPLE_AUTH_MANAGER_ALL_ADMINS: "true"
+    ports:
+      - "127.0.0.1:18088:8080"
+    volumes:
+      - airflow_home:/opt/airflow
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data:ro
+      - ./output:/opt/airflow/output
+
+volumes:
+  airflow_home:

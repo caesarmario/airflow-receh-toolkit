@@ -1,0 +1,6 @@
+order_id,order_date,amount,status
+O001,2026-11-01,100000,paid
+O002,2026-11-01,50000,paid
+O003,2026-11-01,25000,pending
+O004,2026-11-02,75000,paid
+O005,2026-11-02,30000,cancelled
