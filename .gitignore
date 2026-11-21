@@ -5,9 +5,6 @@
 __pycache__/
 *.pyc
 
-# Generated workshop files
-output/*.csv
-
 # Local Airflow files, if any
 logs/
 .airflow/
